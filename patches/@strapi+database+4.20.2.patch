@@ -1,5 +1,5 @@
 diff --git a/node_modules/@strapi/database/dist/index.js b/node_modules/@strapi/database/dist/index.js
-index 0443808..fa96734 100644
+index 0443808..8ce5275 100644
 --- a/node_modules/@strapi/database/dist/index.js
 +++ b/node_modules/@strapi/database/dist/index.js
 @@ -985,6 +985,7 @@ class SqliteDialect extends Dialect {
@@ -29,3 +29,90 @@ index 0443808..fa96734 100644
      case "sqlite-legacy":
        return "sqlite";
      default:
+@@ -1038,19 +1044,22 @@ const createSchemaBuilder = (db) => {
+     },
+     /**
+      * Creates a list of tables in a schema
+-     * @param {KnexInstance} trx
+      * @param {Table[]} tables
+      */
+-    async createTables(tables, trx) {
++    async createTables(tables) {
+       for (const table of tables) {
+         debug$1(`Creating table: ${table.name}`);
+-        const schemaBuilder = this.getSchemaBuilder(trx);
+-        await helpers2.createTable(schemaBuilder, table);
++        await db.connection.transaction(async (trx) => {
++          const schemaBuilder = this.getSchemaBuilder(trx);
++          await helpers2.createTable(schemaBuilder, table);
++        });
+       }
+       for (const table of tables) {
+         debug$1(`Creating table foreign keys: ${table.name}`);
+-        const schemaBuilder = this.getSchemaBuilder(trx);
+-        await helpers2.createTableForeignKeys(schemaBuilder, table);
++        await db.connection.transaction(async (trx) => {
++          const schemaBuilder = this.getSchemaBuilder(trx);
++          await helpers2.createTableForeignKeys(schemaBuilder, table);
++        });
+       }
+     },
+     /**
+@@ -1075,26 +1084,44 @@ const createSchemaBuilder = (db) => {
+     async updateSchema(schemaDiff) {
+       const forceMigration = db.config.settings?.forceMigration;
+       await db.dialect.startSchemaUpdate();
+-      await db.connection.transaction(async (trx) => {
+-        await this.createTables(schemaDiff.tables.added, trx);
+-        if (forceMigration) {
+-          for (const table of schemaDiff.tables.removed) {
+-            debug$1(`Removing table foreign keys: ${table.name}`);
++
++      const tr = async (cb) => {
++        return await db.connection.transaction(async (trx) => {
++          try {
++            return await cb(trx);
++          }
++          catch (error) {
++            console.error("UPDATE SCHEMA error", error);
++            throw error;
++          }
++        });
++      };
++
++      this.createTables(schemaDiff.tables.added);
++
++      if (forceMigration) {
++        for (const table of schemaDiff.tables.removed) {
++          debug$1(`Removing table foreign keys: ${table.name}`);
++          await tr(async (trx) => {
+             const schemaBuilder = this.getSchemaBuilder(trx);
+             await helpers2.dropTableForeignKeys(schemaBuilder, table);
+-          }
+-          for (const table of schemaDiff.tables.removed) {
+-            debug$1(`Removing table: ${table.name}`);
++          });
++        }
++        for (const table of schemaDiff.tables.removed) {
++          debug$1(`Removing table: ${table.name}`);
++          await tr(async (trx) => {
+             const schemaBuilder = this.getSchemaBuilder(trx);
+             await helpers2.dropTable(schemaBuilder, table);
+-          }
++          })
+         }
+-        for (const table of schemaDiff.tables.updated) {
+-          debug$1(`Updating table: ${table.name}`);
++      }
++      for (const table of schemaDiff.tables.updated) {
++        debug$1(`Updating table: ${table.name}`);
++        await tr(async (trx) => {
+           const schemaBuilder = this.getSchemaBuilder(trx);
+           await helpers2.alterTable(schemaBuilder, table);
+-        }
+-      });
++        })
++      }
+       await db.dialect.endSchemaUpdate();
+     }
+   };
