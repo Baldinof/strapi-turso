@@ -70,7 +70,7 @@ module.exports = ({ env }) => {
       },
       pool: { min: env.int('DATABASE_POOL_MIN', 2), max: env.int('DATABASE_POOL_MAX', 10) },
     },
-    sqlite:{
+    libsql:{
       client: require(__dirname+'/../src/db/turso-knex-client'),
       connection: {
         filename: path.join(
