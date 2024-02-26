@@ -1,0 +1,13 @@
+diff --git a/node_modules/knex/lib/dialects/better-sqlite3/index.js b/node_modules/knex/lib/dialects/better-sqlite3/index.js
+index 423755b..1185dad 100644
+--- a/node_modules/knex/lib/dialects/better-sqlite3/index.js
++++ b/node_modules/knex/lib/dialects/better-sqlite3/index.js
+@@ -35,6 +35,8 @@ class Client_BetterSQLite3 extends Client_SQLite3 {
+     const statement = connection.prepare(obj.sql);
+     const bindings = this._formatBindings(obj.bindings);
+ 
++    statement.reader = true;
++
+     if (statement.reader) {
+       const response = await statement.all(bindings);
+       obj.response = response;
