@@ -911,40 +911,40 @@
   dependencies:
     "@lezer/common" "^1.0.0"
 
-"@libsql/darwin-arm64@0.3.2":
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/@libsql/darwin-arm64/-/darwin-arm64-0.3.2.tgz#abcd13e024d40d8b9b734a08274ba348e30b11eb"
-  integrity sha512-w5CTHTM7mBovE0W3Sz/71DPF1fmfQFZtAFCHz+TI+X19PLNFsozBD73xkHdpX4fED5+NejCI58Q8sNYj6g26QQ==
+"@libsql/darwin-arm64@0.3.4":
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/@libsql/darwin-arm64/-/darwin-arm64-0.3.4.tgz#ebfd2af3c7e41108c2b4f5b6ad6402f85ab2076d"
+  integrity sha512-scNlltUTZp74jqjzDVVBtKUy5nZD+0+Q3CR8RJwCKrf73I/0IAKfvwddx4gsinymFqMn8hyiTGIZukgHlBjftA==
 
-"@libsql/darwin-x64@0.3.2":
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/@libsql/darwin-x64/-/darwin-x64-0.3.2.tgz#c8dbd2a18a4e0867105179630c97328f4fe0fd17"
-  integrity sha512-2Ts7uzeKgZ7MFMxaRFpokr8cAsut7jbi2PIWyCq/XmPpWrQUZBEnNCEwuJMVbj+yew6lf4E3PGQlRHJDLIds/A==
+"@libsql/darwin-x64@0.3.4":
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/@libsql/darwin-x64/-/darwin-x64-0.3.4.tgz#7b93402caf219a48a1c9ac34532cd52fa7f46919"
+  integrity sha512-xZUVgzH1qshTnnE8RRZlvAgUGFE7w36iczMiDvGN5XHOuI6gLE4Lk1m/G51MKjN+p7AK/3wowlQpvZPK/KMV8Q==
 
-"@libsql/linux-arm64-gnu@0.3.2":
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/@libsql/linux-arm64-gnu/-/linux-arm64-gnu-0.3.2.tgz#b35c8ee4896aa42368e2269bd4f2ed72e439275f"
-  integrity sha512-dwOQSJCst7FgMAB19NY037nJUTpmREKBgk86Fx/cv0Ins9XArvlwLqtJ41gZUWsbgxSP/Zm6CPdfFtt0P5RzTA==
+"@libsql/linux-arm64-gnu@0.3.4":
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/@libsql/linux-arm64-gnu/-/linux-arm64-gnu-0.3.4.tgz#3f01b6ecc926c265488865da78115fb11ae4573f"
+  integrity sha512-IewL34c9WyxPtvLQqYb5WX3IEqFjprDkFjXmySkDrF9+3k2AfmCurnXjJwOrWHu2GlNLo84mwSVsCQ/jfm8lPw==
 
-"@libsql/linux-arm64-musl@0.3.2":
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/@libsql/linux-arm64-musl/-/linux-arm64-musl-0.3.2.tgz#a483aede2a86b1d38de5269a128198063cf5eef3"
-  integrity sha512-OEHMfqq7+FFExtjPu1nMBN55wjPrVYdii/4n4l0Z+InHKtZciFJIVJ8sYfe64L1szZ7TrLWsi2fEmOL16ZonjQ==
+"@libsql/linux-arm64-musl@0.3.4":
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/@libsql/linux-arm64-musl/-/linux-arm64-musl-0.3.4.tgz#fcad8c7006ddd362985d7df854016e551b6ad9f1"
+  integrity sha512-Qiml3cZuLLptsZ9Mkdkt8sZROvVWyqhWcQkEPpp5MtSUiluy+8y+IHniiI7wJvOpi9A4tGREY9KoDZCWWPwLBw==
 
-"@libsql/linux-x64-gnu@0.3.2":
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/@libsql/linux-x64-gnu/-/linux-x64-gnu-0.3.2.tgz#2ccf3dee6a2d9dad4d028c565ba062622205b0a1"
-  integrity sha512-dVeM9S0x2ImtKBuOcq2K4Xqd/IyMYD5BSdwmOxOFQ3lPAkE0q4YtRhvaJ00ZWaesG5/iarZE7uJA7x2xmxEOWw==
+"@libsql/linux-x64-gnu@0.3.4":
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/@libsql/linux-x64-gnu/-/linux-x64-gnu-0.3.4.tgz#10c91482a500aeec2501ad109da686df3b4495c9"
+  integrity sha512-fZRwlEjzRkJFf+lPpe9AMbaF32IL5HFtQVfXe6nSuE+YwlUNC+kN7ElGIKfuh5wJ3S9S4fXMefH0FY4ynEz4vw==
 
-"@libsql/linux-x64-musl@0.3.2":
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/@libsql/linux-x64-musl/-/linux-x64-musl-0.3.2.tgz#843c24fa8aee94caed69da94ea43ca0f37a7a6a0"
-  integrity sha512-XG812Z/zXqx1m+pTjVtdBah2WvsvrmGE55dO4pXuRJKyvpPb5qg8m/t3PaKhtA9KDru9laP24+xCMyUWYnqkjw==
+"@libsql/linux-x64-musl@0.3.4":
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/@libsql/linux-x64-musl/-/linux-x64-musl-0.3.4.tgz#567e4e4da7cc63043874b3725cc033fb0e10e81e"
+  integrity sha512-TCjX+nQpK/xQC5jhQJWShc98FsoTWQCdp0w1ZhVa47jIFdTPh44rvVf9sS6j5K8bxfyMNiBQQNSn7A0vBfAZXw==
 
-"@libsql/win32-x64-msvc@0.3.2":
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/@libsql/win32-x64-msvc/-/win32-x64-msvc-0.3.2.tgz#8c92ced163b569f18640a4d956ae6f6d93b21807"
-  integrity sha512-IMcfr1fV8o9PalLeozGF5AegZEPSriiXKT9vn5JEWk0Pc6Fm4LX3UVqwO47XTdJf/vJuizxZgxeWrlmm26shKA==
+"@libsql/win32-x64-msvc@0.3.4":
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/@libsql/win32-x64-msvc/-/win32-x64-msvc-0.3.4.tgz#8ccddaf74cdbb7a6eb9277b3ef7e6e2c9affa63b"
+  integrity sha512-q8uLbIqIB6mMUqN6Joiy+GN5d8/WfKsk8cN28H71WAywmQVsFg1u0RJj3X28qFzNGz+K1z4BqQFBSPVEefqYNw==
 
 "@neon-rs/load@^0.0.4":
   version "0.0.4"
@@ -6312,20 +6312,20 @@ libqp@1.1.0:
   integrity sha512-4Rgfa0hZpG++t1Vi2IiqXG9Ad1ig4QTmtuZF946QJP4bPqOYC78ixUXgz5TW/wE7lNaNKlplSYTxQ+fR2KZ0EA==
 
 libsql@^0.3.2:
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/libsql/-/libsql-0.3.2.tgz#1e451dc72df60d3b2947b52f36847bfa45c5b403"
-  integrity sha512-lKJQG6VATgNVNLxxPjGkKkjKF3HnEVP5OpesCz+zaftLzZlIti8ZCRwGcwGwjr3kyV0K5U2rlw0vQpTMCew3FA==
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/libsql/-/libsql-0.3.4.tgz#9cc6da12edda1752b5e4dc101106245b8d151f2f"
+  integrity sha512-lbmNw2H7e2UrBoV0gtvivsBoa8bxuApoYEawAYzwHW+fY51p9VGMp6kS18iSs1QFAn7Ck8YXpT3l29RT2Yh0EQ==
   dependencies:
     "@neon-rs/load" "^0.0.4"
     detect-libc "2.0.2"
   optionalDependencies:
-    "@libsql/darwin-arm64" "0.3.2"
-    "@libsql/darwin-x64" "0.3.2"
-    "@libsql/linux-arm64-gnu" "0.3.2"
-    "@libsql/linux-arm64-musl" "0.3.2"
-    "@libsql/linux-x64-gnu" "0.3.2"
-    "@libsql/linux-x64-musl" "0.3.2"
-    "@libsql/win32-x64-msvc" "0.3.2"
+    "@libsql/darwin-arm64" "0.3.4"
+    "@libsql/darwin-x64" "0.3.4"
+    "@libsql/linux-arm64-gnu" "0.3.4"
+    "@libsql/linux-arm64-musl" "0.3.4"
+    "@libsql/linux-x64-gnu" "0.3.4"
+    "@libsql/linux-x64-musl" "0.3.4"
+    "@libsql/win32-x64-msvc" "0.3.4"
 
 liftoff@^2.5.0:
   version "2.5.0"
